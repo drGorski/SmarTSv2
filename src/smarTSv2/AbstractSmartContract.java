@@ -2,13 +2,16 @@ package smarTSv2;
 
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.ArrayList;
 public abstract class AbstractSmartContract {
-    // list of verification rules
-    protected List<Predicate<AbstractTransaction>> rulesList;
-    // checking the smart contract
-    public final boolean checkSC(AbstractTransaction tr){
+    protected List<Predicate<AbstractTransaction>> rulesList = new ArrayList<>();
+    protected List<List<Predicate<AbstractTransaction>>> configurations = new ArrayList<>();
+    public AbstractSmartContract(){
+        configurations.add(new ArrayList<>());
+    }
+    public boolean checkSC(AbstractTransaction tr){
         boolean correct = false;
-        for (Predicate<AbstractTransaction> vR : rulesList) {
+        for (Predicate<AbstractTransaction> vR : configurations.get(0)) {
             correct = vR.test(tr);
             if (!correct) break;
         }
