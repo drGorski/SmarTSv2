@@ -1,4 +1,4 @@
-package pl.gdansk.ug.smarTS;
+package smarTSv2;
 
 import java.util.ArrayList;
 abstract class AbstractRunTestCases {

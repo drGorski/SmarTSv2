@@ -1,4 +1,4 @@
-package pl.gdansk.ug.smarTS;
+package smarTSv2;
 
 public class AbstractTransaction {
 }
