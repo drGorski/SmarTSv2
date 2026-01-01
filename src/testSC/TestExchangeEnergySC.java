@@ -48,14 +48,19 @@ public class TestExchangeEnergySC extends AbstractTestConfigSC {
     }
     public void runTestSuite(ExchangeEnergyContract sC) {
         System.out.println("Smart contract: " + sC.getClass());
-        for (int j = 0; j < transactions.size(); j++) {
-            ArrayList<AbstractTransaction> list = transactions.get(j);
+        for (ArrayList<AbstractTransaction> list : transactions) {
             if (list.get(0) instanceof TransactionIn) {
-                for (int i = 0; i < list.size(); i++) { runTest(sC, list.get(i), i, i == 0); }
+                for (int i = 0; i < list.size(); i++) {
+                    runTest(sC, list.get(i), i, i == 0);
+                }
             } else if (list.get(0) instanceof TransactionGrid) {
-                for (int i = 0; i < list.size(); i++) { runTest(sC, (TransactionGrid) list.get(i), i, i == 0);}
+                for (int i = 0; i < list.size(); i++) {
+                    runTest(sC, (TransactionGrid) list.get(i), i, i == 0);
+                }
             } else if (list.get(0) instanceof TransactionCross) {
-                for (int i = 0; i < list.size(); i++) { runTest(sC, (TransactionCross) list.get(i), i, i == 0);}
+                for (int i = 0; i < list.size(); i++) {
+                    runTest(sC, (TransactionCross) list.get(i), i, i == 0);
+                }
             }
         }
     }
