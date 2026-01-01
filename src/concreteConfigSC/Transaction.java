@@ -1,4 +1,4 @@
-package concreteSC;
+package concreteConfigSC;
 
 import smarTSv2.AbstractTransaction;
 

@@ -1,12 +1,12 @@
-package concreteSC;
+package concreteConfigSC;
 
-import smarTSv2.AbstractSmartContract;
+import smarTSv2.AbstractConfigSC;
 import smarTSv2.AbstractTransaction;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
-public final class ExchangeEnergyContract extends AbstractSmartContract {
+public final class ExchangeEnergyContract extends AbstractConfigSC {
     public ExchangeEnergyContract(){
         // verification rules
         rulesList.add(t -> ((Transaction) t).getSourceID() != ((Transaction) t).getTargetID());

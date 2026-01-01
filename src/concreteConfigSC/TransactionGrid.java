@@ -1,4 +1,4 @@
-package concreteSC;
+package concreteConfigSC;
 
 public final class TransactionGrid extends Transaction {
     private int energySubnetID;

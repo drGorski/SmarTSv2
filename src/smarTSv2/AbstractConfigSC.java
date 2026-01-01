@@ -3,10 +3,10 @@ package smarTSv2;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.ArrayList;
-public abstract class AbstractSmartContract {
+public abstract class AbstractConfigSC {
     protected List<Predicate<AbstractTransaction>> rulesList = new ArrayList<>();
     protected List<List<Predicate<AbstractTransaction>>> configurations = new ArrayList<>();
-    public AbstractSmartContract(){
+    public AbstractConfigSC(){
         configurations.add(new ArrayList<>());
     }
     public boolean checkSC(AbstractTransaction tr){
