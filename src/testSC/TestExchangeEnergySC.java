@@ -5,6 +5,7 @@ import concreteConfigSC.TransactionIn;
 import concreteConfigSC.TransactionCross;
 import concreteConfigSC.TransactionGrid;
 import smarTSv2.AbstractConfigSC;
+import smarTSv2.AbstractSC;
 import smarTSv2.AbstractTestConfigSC;
 import smarTSv2.AbstractTransaction;
 import java.util.ArrayList;
@@ -31,30 +32,25 @@ public class TestExchangeEnergySC extends AbstractTestConfigSC {
         transactions.get(2).add(new TransactionCross(500.0, 100.0, 2500.0, 0.0, 10.0, 100, 200, 1000, 2000));
         transactions.get(2).add(new TransactionCross(500.0, 1000.0, 250.0, 0.0, 10.0, 100, 200, 1000, 2000));
     }
-    public void runTest(AbstractConfigSC sC, AbstractTransaction tR, int trNumber, boolean expectedResult){
-        boolean result = sC.checkSC(tR);
-        boolean correct = result == expectedResult;
-        System.out.println("Test no: " + (trNumber + 1) + ", transaction: " + tR.getClass() + ", test result: " + ((correct)?"PASS":"FAIL"));
-    }
-    public void runTest(ExchangeEnergyContract sC, TransactionGrid tR, int trNumber, boolean expectedResult) {
+    protected void runTest(ExchangeEnergyContract sC, TransactionGrid tR, int trNumber, boolean expectedResult) {
         boolean result = sC.checkSC(tR);
         boolean correct = result == expectedResult;
         System.out.println("Test no: " + (trNumber + 1) + ", transaction: " + tR.getClass() + ", test result: " + ((correct) ? "PASS" : "FAIL"));
     }
-    public void runTest(ExchangeEnergyContract sC, TransactionCross tR, int trNumber, boolean expectedResult) {
+    protected void runTest(ExchangeEnergyContract sC, TransactionCross tR, int trNumber, boolean expectedResult) {
         boolean result = sC.checkSC(tR);
         boolean correct = result == expectedResult;
         System.out.println("Test no: " + (trNumber + 1) + ", transaction: " + tR.getClass() + ", test result: " + ((correct) ? "PASS" : "FAIL"));
     }
-    public void runTestSuite(ExchangeEnergyContract sC) {
+    public void runTestSuite(AbstractConfigSC sC) {
         System.out.println("Smart contract: " + sC.getClass());
         for (ArrayList<AbstractTransaction> list : transactions) {
             if (list.get(0) instanceof TransactionIn) {
                 for (int i = 0; i < list.size(); i++) { runTest(sC, list.get(i), i, i == 0); }
             } else if (list.get(0) instanceof TransactionGrid) {
-                for (int i = 0; i < list.size(); i++) { runTest(sC, (TransactionGrid) list.get(i), i, i == 0); }
+                for (int i = 0; i < list.size(); i++) { runTest((ExchangeEnergyContract) sC, (TransactionGrid) list.get(i), i, i == 0); }
             } else if (list.get(0) instanceof TransactionCross) {
-                for (int i = 0; i < list.size(); i++) { runTest(sC, (TransactionCross) list.get(i), i, i == 0); }
+                for (int i = 0; i < list.size(); i++) { runTest((ExchangeEnergyContract) sC, (TransactionCross) list.get(i), i, i == 0); }
             }
         }
     }
