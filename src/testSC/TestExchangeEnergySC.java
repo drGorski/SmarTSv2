@@ -8,6 +8,10 @@ import smarTSv2.AbstractConfigSC;
 import smarTSv2.AbstractTestConfigSC;
 import smarTSv2.AbstractTransaction;
 import java.util.ArrayList;
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public class TestExchangeEnergySC extends AbstractTestConfigSC {
     public void initiateTransactions() {
         transactions.clear();

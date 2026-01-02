@@ -3,6 +3,10 @@ package testSC;
 import concreteSC.InsuranceTransaction;
 import smarTSv2.AbstractTestSC;
 import java.time.LocalDate;
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public class TestInsuranceConclusionSC extends AbstractTestSC {
     public void initiateTransactions(){
         transactions.clear();

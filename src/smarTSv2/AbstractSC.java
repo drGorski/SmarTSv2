@@ -2,6 +2,10 @@ package smarTSv2;
 
 import java.util.List;
 import java.util.function.Predicate;
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public abstract class AbstractSC {
     // list of verification rules
     protected List<Predicate<AbstractTransaction>> rulesList;

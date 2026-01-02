@@ -1,6 +1,10 @@
 package smarTSv2;
 
 import java.util.ArrayList;
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public abstract class AbstractTestSC {
     protected ArrayList<AbstractTransaction> transactions = new ArrayList<>();
     public AbstractTestSC(){
