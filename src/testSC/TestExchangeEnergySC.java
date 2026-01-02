@@ -5,7 +5,6 @@ import concreteConfigSC.TransactionIn;
 import concreteConfigSC.TransactionCross;
 import concreteConfigSC.TransactionGrid;
 import smarTSv2.AbstractConfigSC;
-import smarTSv2.AbstractSC;
 import smarTSv2.AbstractTestConfigSC;
 import smarTSv2.AbstractTransaction;
 import java.util.ArrayList;

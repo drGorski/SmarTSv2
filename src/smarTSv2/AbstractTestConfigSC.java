@@ -1,7 +1,5 @@
 package smarTSv2;
 
-import concreteConfigSC.ExchangeEnergyContract;
-
 import java.util.ArrayList;
 public abstract class AbstractTestConfigSC {
     protected ArrayList<ArrayList<AbstractTransaction>> transactions = new ArrayList<>();
