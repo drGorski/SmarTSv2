@@ -2,7 +2,10 @@ import concreteSC.InsuranceConclusionSC;
 import concreteConfigSC.ExchangeEnergyContract;
 import testSC.TestExchangeEnergySC;
 import testSC.TestInsuranceConclusionSC;
-
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public class RunTestSuite {
     public static void main(String[] args){
         // smart contracts and test classes

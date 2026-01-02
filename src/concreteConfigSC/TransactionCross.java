@@ -1,5 +1,8 @@
 package concreteConfigSC;
-
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public final class TransactionCross extends Transaction {
     private int sourceCommunityID;
     private int targetCommunityID;

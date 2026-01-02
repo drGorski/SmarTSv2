@@ -1,8 +1,11 @@
 package concreteSC;
 
 import smarTSv2.AbstractTransaction;
-
 import java.time.LocalDate;
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public class InsuranceTransaction extends AbstractTransaction {
     private LocalDate dateFrom;
     private LocalDate dateTo;

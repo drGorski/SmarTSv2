@@ -3,7 +3,10 @@ package concreteSC;
 import smarTSv2.AbstractSC;
 import java.time.LocalDate;
 import java.util.Arrays;
-
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public class InsuranceConclusionSC extends AbstractSC {
     public InsuranceConclusionSC(){
         rulesList = Arrays.asList(

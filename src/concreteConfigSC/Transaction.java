@@ -1,7 +1,10 @@
 package concreteConfigSC;
 
 import smarTSv2.AbstractTransaction;
-
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public abstract sealed class Transaction extends AbstractTransaction permits TransactionIn, TransactionCross, TransactionGrid {
     private double quantity;
     private double sourceSurplus;

@@ -2,10 +2,12 @@ package concreteConfigSC;
 
 import smarTSv2.AbstractConfigSC;
 import smarTSv2.AbstractTransaction;
-
 import java.util.ArrayList;
 import java.util.function.Predicate;
-
+/************************************
+ *  Author: Tomasz Górski
+ *  e-mail: tomasz.gorski@ieee.org
+ ************************************/
 public final class ExchangeEnergyContract extends AbstractConfigSC {
     public ExchangeEnergyContract(){
         // verification rules
