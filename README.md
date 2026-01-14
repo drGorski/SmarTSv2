@@ -16,7 +16,7 @@ The abstract layer of the SmarTSv2 package consists of the following classes:
 
 The figure below presents the UML Class diagram with abstract classes in the SmarTSv2 package.
 <p align="center">
-  <img src="UML Class diagram.png" alt="UML Class diagram" width="400">
+  <img src="UML Class diagram.png" alt="UML Class diagram" width="450">
 </p>
 
 ## Running test suites
