@@ -12,6 +12,8 @@ The abstract layer of the SmarTSv2 package consists of the following classes:
 * ``AbstractConfigSC`` class --- an abstract class of a smart contract that verifies multiple types of transactions. The class declares an instance variable ``configurations``, which is a list of verification rule configurations for various types of transactions.
 * ``AbstractTestConfigSC`` class --- an abstract test class for smart contracts that validate multiple transaction types.
 
+Both abstract test classes ``AbstractTestSC`` and ``AbstractTestConfigSC`` contain methods ``runTest()`` and ``runTestSuite()``. Thus, a unified test execution mechanism has been provided for both types of smart contracts.
+
 ## Package classes in a UML class diagram
 
 The figure below presents the UML Class diagram with abstract classes in the SmarTSv2 package.
