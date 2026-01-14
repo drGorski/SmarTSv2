@@ -23,4 +23,4 @@ The figure below presents the UML Class diagram with abstract classes in the Sma
 
 ## Running test suites
 
-The ``RunTestSuite`` class should be run to execute predefined test suites for two example smart contracts. 
+The ``RunTestSuite`` class should be run to execute predefined test suites for two example smart contracts: ``InsuranceConclusionSC`` and ``ExchangeEnergyContract``.
